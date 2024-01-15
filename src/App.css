@@ -1,0 +1,52 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+body{
+  background:palevioletred;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  background: rgb(145, 177, 241);
+  padding: 50px;
+}
+input{
+  padding: 15px;
+  border: none;
+  background: none;
+  background: rgb(254, 241, 122);
+  width: 300px;
+  margin-right: 10px;
+}
+button{
+  border-radius: 100px;
+  background: navy;
+  color: aliceblue;
+  padding: 5px;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.todos-list{
+  margin-top: 3rem;
+}
+.todo{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:rgb(153, 215, 205);
+  padding:7px 20px;
+  margin: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.close{
+  padding:5px 10px;
+  cursor: pointer;
+
+}
