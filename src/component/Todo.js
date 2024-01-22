@@ -1,4 +1,5 @@
-import { useState } from "react"
+
+import { useState, useEffect } from "react";
 
 function generatedId(){
     return Math.floor(Math.random()*10)
@@ -7,6 +8,18 @@ function generatedId(){
 function Todo() {
     const[todos,setTodos] = useState([])
     const[input,setInput] = useState("")
+
+    useEffect(() => {
+        // Retrieve todos from local storage when the component mounts
+        const storedTodos = JSON.parse(localStorage.getItem("todos")) || [];
+        setTodos(storedTodos);
+      }, []);
+    
+      useEffect(() => {
+        // Save todos to local storage whenever todos change
+        localStorage.setItem("todos", JSON.stringify(todos));
+      }, [todos]);
+
     const handleSubmit=()=>{
         setTodos((todos) =>
             todos.concat({
